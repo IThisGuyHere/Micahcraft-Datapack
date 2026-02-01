@@ -7,16 +7,15 @@ from .util import require, where
 
 
 def run(ctx: Context, vanilla: Vanilla):
-    with ctx.inject(Logger).push("enchant_balance"):
-        abandoned_mineshaft(ctx, vanilla)
-        ancient_city(ctx, vanilla)
-        end_city_treasure(ctx, vanilla)
-        nether_bridge(ctx, vanilla)
-        pillager_outpost(ctx, vanilla)
-        simple_dungeon(ctx, vanilla)
-        trial_chambers(ctx, vanilla)
-        stronghold(ctx, vanilla)
-        woodland_mansion(ctx, vanilla)
+    abandoned_mineshaft(ctx, vanilla)
+    ancient_city(ctx, vanilla)
+    end_city_treasure(ctx, vanilla)
+    nether_bridge(ctx, vanilla)
+    pillager_outpost(ctx, vanilla)
+    simple_dungeon(ctx, vanilla)
+    trial_chambers(ctx, vanilla)
+    stronghold(ctx, vanilla)
+    woodland_mansion(ctx, vanilla)
 
 
 # Returns false if the options are an array

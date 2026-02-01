@@ -6,14 +6,13 @@ from .util import require, one, act, where
 
 
 def run(ctx: Context, vanilla: Vanilla):
-    with ctx.inject(Logger).push("enchants"):
-        channeling(ctx, vanilla)
-        impaling(ctx, vanilla)
-        looting(ctx, vanilla)
-        loyalty(ctx, vanilla)
-        unbreaking(ctx, vanilla)
-        protection(ctx, vanilla)
-        fire_protection(ctx, vanilla)
+    channeling(ctx, vanilla)
+    impaling(ctx, vanilla)
+    looting(ctx, vanilla)
+    loyalty(ctx, vanilla)
+    unbreaking(ctx, vanilla)
+    protection(ctx, vanilla)
+    fire_protection(ctx, vanilla)
 
 
 # Make channeling work in the rain

@@ -9,13 +9,12 @@ from .util import require, one, where, remove_where
 
 
 def run(ctx: Context, vanilla: Vanilla):
-    with ctx.inject(Logger).push("loot_tables"):
-        germination(ctx, vanilla)
-        budding_amethyst(ctx, vanilla)
-        dirt_path(ctx, vanilla)
-        jungle_leaves(ctx, vanilla)
-        piglin_bartering(ctx, vanilla)
-        beheading(ctx, vanilla)
+    germination(ctx, vanilla)
+    budding_amethyst(ctx, vanilla)
+    dirt_path(ctx, vanilla)
+    jungle_leaves(ctx, vanilla)
+    piglin_bartering(ctx, vanilla)
+    beheading(ctx, vanilla)
 
 
 # Add seed count changes for germination
