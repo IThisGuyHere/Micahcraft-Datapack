@@ -27,7 +27,7 @@
         "tools.tweaks.main.run",
         "tools.functions.score_triggers.run",
         "tools.functions.veinmining",
-        "tools.json.enchantment.run",
+        "tools.json.enchantment",
         "tools.functions.unreachable.run",
         "tools.trims.run",
         "tools.utility.print_finished",
