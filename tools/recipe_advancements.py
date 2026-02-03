@@ -2,19 +2,19 @@ from beet import Context
 from beet.contrib.vanilla import Vanilla
 from tools.utility import Recipes
 from tools.logger import Logger
-from tools.misode import Misode
+from tools.mcmeta import MinecraftMeta
 from dataclasses import dataclass
 
 
 def run(ctx: Context):
     with ctx.inject(Logger).push("recipe_advancements") as logger:
         recipes = ctx.inject(Recipes)
-        misode = ctx.inject(Misode)
+        minecraft_meta = ctx.inject(MinecraftMeta)
         vanilla = ctx.inject(Vanilla)
         valid_inputs = {
             *(f"#{_}" for _ in ctx.data.item_tags),
             *(f"#{_}" for _ in vanilla.data.item_tags),
-            *(f"minecraft:{_}" for _ in misode.item_ids()),
+            *(f"minecraft:{_}" for _ in minecraft_meta.item_ids()),
         }
         valid_outputs = set(ctx.data.recipes)
         recipe_list: list[RecipeAdvancement] = ctx.meta["recipe_advancements"]
