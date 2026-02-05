@@ -5,7 +5,16 @@ execute store result score #mk.settings.before_value mk.math run function micahc
 scoreboard players operation #mk.settings.after_value mk.math = #mk.settings.before_value mk.math
 scoreboard players add #mk.settings.after_value mk.math 1
 scoreboard players operation #mk.settings.after_value mk.math %= #5 mk.math
+
+execute store result storage micahcraft:api/settings from int 1 run scoreboard players get #mk.settings.before_value mk.math
+execute store result storage micahcraft:api/settings to int 1 run scoreboard players get #mk.settings.after_value mk.math
+
 scoreboard players operation #mk.settings.before_value mk.math *= #mk.settings.flag mk.math
 scoreboard players operation #mk.settings.after_value mk.math *= #mk.settings.flag mk.math
 scoreboard players operation @s mk.settings.hud -= #mk.settings.before_value mk.math
 scoreboard players operation @s mk.settings.hud += #mk.settings.after_value mk.math
+
+data modify storage micahcraft:api/settings namespace set value "hud"
+execute store result storage micahcraft:api/settings flag int 1 run scoreboard players get #mk.settings.flag mk.math
+
+function #micahcraft:api/setting_changed
