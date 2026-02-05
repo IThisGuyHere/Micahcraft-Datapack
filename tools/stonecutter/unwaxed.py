@@ -1,5 +1,5 @@
 from beet import Context
-from tools.mcmeta import MinecraftMeta
+from tools.meta.minecraft import MinecraftMeta
 from tools.logger import Logger
 from tools.utility import Recipes
 

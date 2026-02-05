@@ -2,7 +2,7 @@ from beet import Context
 from beet.contrib.vanilla import Vanilla
 from tools.utility import Recipes
 from tools.logger import Logger
-from tools.mcmeta import MinecraftMeta
+from tools.meta.minecraft import MinecraftMeta
 from dataclasses import dataclass
 
 

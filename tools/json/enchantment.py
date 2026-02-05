@@ -1,5 +1,5 @@
 from beet import Context, BlockTag
-from tools.mcmeta import MinecraftMeta
+from tools.meta.minecraft import MinecraftMeta
 from copy import deepcopy
 from typing import Any, Callable, Sequence
 from tools.logger import Logger
