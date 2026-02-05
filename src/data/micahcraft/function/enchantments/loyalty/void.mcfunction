@@ -5,3 +5,4 @@ execute as @e[type=trident] \
 execute as @e[type=trident] \
     if data entity @s item.components.'minecraft:enchantments'.'minecraft:loyalty' \
     run schedule function micahcraft:enchantments/loyalty/void 1t replace
+execute if entity @s run schedule function micahcraft:enchantments/loyalty/void 1t replace
