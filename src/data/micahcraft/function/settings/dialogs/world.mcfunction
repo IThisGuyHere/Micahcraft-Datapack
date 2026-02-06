@@ -48,6 +48,15 @@ data modify storage micahcraft:settings _dialog set value {\
                 "type": "run_command",\
                 "command": "trigger mk.settings.world.trigger set 4"\
             }\
+        },\
+        {\
+            "label": {\
+                "translate": "settings.micahcraft.world.invisible_armor"\
+            },\
+            "action": {\
+                "type": "run_command",\
+                "command": "trigger mk.settings.world.trigger set 8"\
+            }\
         }\
     ]\
 }
@@ -55,6 +64,8 @@ data modify storage micahcraft:settings _dialog set value {\
 execute store result score #mk.trim_particles_enabled mk.math run function micahcraft:settings/data/get/basic {namespace:'world',path:'trim_particles_enabled'}
 execute store result score #mk.trim_particles_self mk.math run function micahcraft:settings/data/get/basic {namespace:'world',path:'trim_particles_self'}
 execute store result score #mk.drop_player_head mk.math run function micahcraft:settings/data/get/basic {namespace:'world',path:'drop_player_head'}
+execute store result score #mk.invisible_armor mk.math run function micahcraft:settings/data/get/basic {namespace:'world',path:'invisible_armor'}
+execute store result score #mk.invisible_elytra mk.math run function micahcraft:settings/data/get/basic {namespace:'world',path:'invisible_elytra'}
 
 execute if score #mk.trim_particles_enabled mk.math matches 1 run \
     data modify storage micahcraft:settings display.world.trim_particles_enabled set value \
@@ -79,6 +90,22 @@ execute if score #mk.drop_player_head mk.math matches 1 run \
 execute unless score #mk.drop_player_head mk.math matches 1 run \
     data modify storage micahcraft:settings display.world.drop_player_head set value \
     {text:'Enabled',color:'dark_green',bold:1b}
+
+execute if score #mk.invisible_armor mk.math matches 1 run \
+    data modify storage micahcraft:settings display.world.invisible_armor set value \
+    {text:'Hidden',color:'dark_green',bold:1b}
+
+execute unless score #mk.invisible_armor mk.math matches 1 run \
+    data modify storage micahcraft:settings display.world.invisible_armor set value \
+    {text:'Visible',color:'white',bold:1b}
+
+execute unless score #mk.invisible_elytra mk.math matches 1 run \
+    data modify storage micahcraft:settings display.world.invisible_elytra set value \
+    {text:'Hidden',color:'dark_green',bold:1b}
+
+execute if score #mk.invisible_elytra mk.math matches 1 run \
+    data modify storage micahcraft:settings display.world.invisible_elytra set value \
+    {text:'Visible',color:'white',bold:1b}
 
 execute summon text_display run function micahcraft:settings/dialogs/resolve/world
 function micahcraft:settings/show with storage micahcraft:settings

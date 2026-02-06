@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "unlocked": {
+            "trigger": "minecraft:effects_changed"
+        }
+    },
+    "rewards": {
+        "function": "micahcraft:events/invisible_armor/invisibility"
+    }
+}

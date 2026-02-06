@@ -18,6 +18,7 @@
     "pipeline": [
         "beet.contrib.vanilla.load_vanilla",
         "tools.meta.csv",
+        "tools.misc",
         "tools.stonecutter.variants.run",
         "tools.stonecutter.woodcutter.run",
         "tools.stonecutter.paintings.run",

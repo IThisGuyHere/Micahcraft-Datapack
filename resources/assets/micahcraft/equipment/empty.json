@@ -1,0 +1,94 @@
+{
+    "layers": {
+        "wolf_body": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "horse_body": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "llama_body": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "humanoid": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "humanoid_leggings": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "wings": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "pig_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "strider_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "camel_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "horse_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "donkey_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "mule_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "skeleton_horse_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "zombie_horse_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "happy_ghast_body": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "nautilus_body": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "nautilus_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ],
+        "camel_husk_saddle": [
+            {
+                "texture": "micahcraft:empty"
+            }
+        ]
+    }
+}

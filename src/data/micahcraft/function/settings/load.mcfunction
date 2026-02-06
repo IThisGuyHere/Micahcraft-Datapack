@@ -30,6 +30,8 @@ data modify storage micahcraft:settings world set value {\
     trim_particles_enabled:1,\
     trim_particles_self:2,\
     drop_player_head:4,\
+    invisible_armor:8,\
+    invisible_elytra:16,\
 }
 
 data modify storage micahcraft:settings enchantments set value {\

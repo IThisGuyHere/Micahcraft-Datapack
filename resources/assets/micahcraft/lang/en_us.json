@@ -72,5 +72,7 @@
     "settings.micahcraft.world.title": "World",
     "settings.micahcraft.world.trim_particles_enabled": "Trim Particles",
     "settings.micahcraft.world.trim_particles_self": "Trim Particles Self",
-    "settings.micahcraft.world.drop_player_head": "Drop Player Head"
+    "settings.micahcraft.world.drop_player_head": "Drop Player Head",
+    "settings.micahcraft.world.invisible_armor": "Invisible Armor",
+    "settings.micahcraft.world.invisible_elytra": "Invisible Elytra"
 }

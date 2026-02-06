@@ -1,0 +1,1 @@
+execute as @a[tag=mk.invisible_armor.needs_update] at @s run function micahcraft:events/invisible_armor/update
