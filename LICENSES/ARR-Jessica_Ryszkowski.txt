@@ -1,6 +1,6 @@
-Micahcraft Paintings — Jessica Koehler
+Micahcraft Paintings — Jessica Ryszkowski
 
-Copyright © 2025 Jessica Koehler
+Copyright © 2025 Jessica Ryszkowski
 Used in Micahcraft by permission.
 
 All Rights Reserved.
@@ -8,7 +8,7 @@ All Rights Reserved.
 Scope
 -----
 This notice applies ONLY to the contents of:
-  resources/assets/micahcraft/textures/painting/jessica_kohler/**
+  resources/assets/micahcraft/textures/painting/jessica_ryszkowski/**
 
 Permissions
 -----------

@@ -10,9 +10,9 @@ See the canonical license text in this repo at:
 
 Exceptions
 ----------
-- Jessica Koehler paintings:
-  resources/assets/micahcraft/textures/painting/jessica_kohler/**
-  -> All Rights Reserved (see /LICENSES/ARR-Jessica_Kohler.txt)
+- Jessica Ryszkowski paintings:
+  resources/assets/micahcraft/textures/painting/jessica_ryszkowski/**
+  -> All Rights Reserved (see /LICENSES/ARR-Jessica_Ryszkowski.txt)
 
 - Estecka assets:
   resources/assets/micahcraft/textures/estecka/**
