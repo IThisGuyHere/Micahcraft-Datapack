@@ -1,7 +1,7 @@
 from beet import Context
 import json
 from urllib.request import urlopen
-from typing import cast
+from typing import cast, Any
 
 from pydantic import BaseModel, RootModel, ConfigDict, Field
 
@@ -9,31 +9,36 @@ from pydantic import BaseModel, RootModel, ConfigDict, Field
 class MinecraftMeta:
     _version: str
     _item_ids: list[str] | None
+    _item_information: dict[str, Any] | None
     _block_information: dict[str, Block] | None
 
     def __init__(self, ctx: Context):
         self._version = ctx.minecraft_version
         self._item_ids = None
+        self._item_information = None
         self._block_information = None
 
     def item_ids(self) -> list[str]:
         if self._item_ids is not None:
             return self._item_ids
-        else:
-            url = f"https://raw.githubusercontent.com/misode/mcmeta/refs/tags/{self._version}-registries/item/data.min.json"
-            with urlopen(url) as r:
-                self._item_ids = cast(list[str], json.load(r))
-            return self._item_ids
+        self._item_ids = sorted(self.item_information().keys())
+        return self._item_ids
 
     def block_information(self) -> dict[str, Block]:
         if self._block_information is not None:
             return self._block_information
-        else:
-            url = f"https://raw.githubusercontent.com/mcbookshelf/mcdata/refs/tags/v1/{self._version}/blocks/data.min.json"
-            with urlopen(url) as r:
-                self._block_information = BlocksData.model_validate(json.load(r)).root
-            return self._block_information
+        url = f"https://raw.githubusercontent.com/mcbookshelf/mcdata/refs/tags/v1/{self._version}/blocks/data.min.json"
+        with urlopen(url) as r:
+            self._block_information = BlocksData.model_validate(json.load(r)).root
+        return self._block_information
 
+    def item_information(self) -> dict[str, Any]:
+        if self._item_information is not None:
+            return self._item_information
+        url = f"https://raw.githubusercontent.com/misode/mcmeta/refs/tags/{self._version}-summary/item_components/data.min.json"
+        with urlopen(url) as r:
+            self._item_information = cast(dict[str, Any], json.load(r))
+        return self._item_information
 
 
 AABB = tuple[float, float, float, float, float, float]
@@ -47,6 +52,7 @@ class Sounds(BaseModel):
     hit: str
     place: str
     step: str
+
 
 class State(BaseModel):
     model_config = ConfigDict(extra="forbid")
