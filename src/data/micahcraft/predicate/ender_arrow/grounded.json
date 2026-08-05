@@ -2,7 +2,7 @@
     "condition": "entity_properties",
     "entity": "this",
     "predicate": {
-        "type": "spectral_arrow",
+        "entity_type": "spectral_arrow",
         "slots": {
             "container.0": {
                 "components": {
