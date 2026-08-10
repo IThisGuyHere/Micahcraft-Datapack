@@ -1,0 +1,18 @@
+{
+  "gives": {
+    "count": 4,
+    "id": "minecraft:pumpkin_pie",
+    "components": {
+      "item_model": "micahcraft:sweet_berry_pie",
+      "item_name": {
+        "translate": "item.micahcraft.sweet_berry_pie"
+      }
+    }
+  },
+  "max_uses": 12.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "id": "minecraft:emerald"
+  },
+  "xp": 5.0
+}

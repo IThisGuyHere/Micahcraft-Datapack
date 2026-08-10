@@ -74,5 +74,8 @@
     "settings.micahcraft.world.trim_particles_self": "Trim Particles Self",
     "settings.micahcraft.world.drop_player_head": "Drop Player Head",
     "settings.micahcraft.world.invisible_armor": "Invisible Armor",
-    "settings.micahcraft.world.invisible_elytra": "Invisible Elytra"
+    "settings.micahcraft.world.invisible_elytra": "Invisible Elytra",
+
+    "misc.micahcraft.filled_map.ancient_city": "Deep Dark Explorer Map",
+    "misc.micahcraft.filled_map.ruins": "Ruins Explorer Map"
 }
