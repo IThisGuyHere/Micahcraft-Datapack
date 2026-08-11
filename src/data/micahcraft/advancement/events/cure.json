@@ -9,7 +9,7 @@
                     ]
                 },
                 "entity": {
-                    "type": "minecraft:zombie_villager"
+                    "entity_type": "minecraft:zombie_villager"
                 }
             }
         }

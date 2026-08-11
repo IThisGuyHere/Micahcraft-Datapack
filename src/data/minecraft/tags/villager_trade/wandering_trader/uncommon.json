@@ -1,0 +1,16 @@
+{
+  "values": [
+    "minecraft:wandering_trader/emerald_packed_ice",
+    "minecraft:wandering_trader/emerald_blue_ice",
+    "minecraft:wandering_trader/emerald_podzol",
+    "micahcraft:wandering_trader/emerald_mycelium",
+    "minecraft:wandering_trader/emerald_enchanted_iron_pickaxe",
+    "minecraft:wandering_trader/emerald_long_invisibility_potion",
+    "minecraft:cartographer/3/emerald_and_compass_ocean_explorer_map",
+    "minecraft:cartographer/3/emerald_and_compass_trial_chamber_map",
+    "minecraft:cartographer/5/emerald_and_compass_woodland_mansion_map",
+    "micahcraft:wandering_trader/emerald_and_compass_ancient_city_map",
+    "micahcraft:wandering_trader/emerald_and_compass_ruins_map"
+  ],
+  "replace": true
+}

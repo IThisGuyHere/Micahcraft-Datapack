@@ -22,7 +22,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type": [
+                "entity_type": [
                     "item_display",
                     "item_frame",
                     "glow_item_frame"
