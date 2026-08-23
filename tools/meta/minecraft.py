@@ -63,6 +63,7 @@ class State(BaseModel):
     shape: list[AABB]
     collision_shape: list[AABB]
     properties: dict[str, str]
+    fluid: dict[str, str]
 
 
 class Block(BaseModel):

@@ -4,11 +4,25 @@ from tools.utility import Recipes
 from tools.logger import Logger
 
 
+ONE_WAY_FAMILIES = {
+    "minecraft:stone": "minecraft:cobblestone",
+    "minecraft:deepslate": "minecraft:cobbled_deepslate",
+}
+
+
 def run(ctx: Context):
     with ctx.inject(Logger).push("variants") as logger:
         vanilla = ctx.inject(Vanilla)
         recipe_helper = ctx.inject(Recipes)
-        recipes = [recipe for _, recipe in vanilla.data.recipes.items() if recipe.data.get("type") == "minecraft:stonecutting"]
+        recipes = [
+            recipe
+            for _, recipe in vanilla.data.recipes.items()
+            if recipe.data.get("type") == "minecraft:stonecutting"
+            and not any(
+                recipe.data.get("ingredient") == source and recipe.data.get("result", {}).get("id") == target
+                for source, target in ONE_WAY_FAMILIES.items()
+            )
+        ]
         inputs: set[str] = set()
         outputs: set[str] = set()
 
@@ -39,8 +53,12 @@ def run(ctx: Context):
                     if k2 in temp and k in v2:
                         temp[k2].update(v2)
 
-        tags = temp
-        all_outputs = temp.copy()
+        tags = {family: values.copy() for family, values in temp.items()}
+        all_outputs = {family: values.copy() for family, values in temp.items()}
+        for source, target in ONE_WAY_FAMILIES.items():
+            tags[source].difference_update(all_outputs[target])
+            all_outputs[source].update(all_outputs[target])
+
         bad_inputs = ("_slab", "_stairs", "_wall")
 
         for k, v in tags.items():

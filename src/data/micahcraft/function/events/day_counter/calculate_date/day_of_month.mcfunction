@@ -1,4 +1,4 @@
-execute store result score #Value mk.math run time query day
+execute store result score #Value mk.math run time query day repetition
 scoreboard players operation #Value mk.math %= #365 mk.math
 execute if score #Value mk.math matches ..30 run scoreboard players set #Temp mk.math 31
 execute if score #Value mk.math matches 31..58 run scoreboard players set #Temp mk.math 28
