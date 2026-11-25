@@ -33,10 +33,10 @@
   "gives": {
     "id": "minecraft:filled_map"
   },
-  "max_uses": 1.0,
+  "max_uses": 1,
   "reputation_discount": 0.2,
   "wants": {
-    "count": 12.0,
+    "count": 12,
     "id": "minecraft:emerald"
   }
 }

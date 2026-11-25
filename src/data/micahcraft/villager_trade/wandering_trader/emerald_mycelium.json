@@ -3,7 +3,7 @@
     "count": 1,
     "id": "minecraft:mycelium"
   },
-  "max_uses": 6.0,
+  "max_uses": 6,
   "reputation_discount": 0.05,
   "wants": {
     "count": 2,
